@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        body {
+            margin: 1% 2%;
+            background-image: url('1.jpg');
+        }
+
+        h1, #tugas {
+            color: #f8f8f8;
+        }
+
+        .relative-padding {
+            background: #eee;
+            border: solid 1px #ddd;
+            padding: 3% 5%;
+        }
+
+        .overflow-demo {
+            overflow: hidden;
+        }
+
+        .overflow-demo .item {
+            width: 45%;
+            margin-right: 5%;
+            float: left;
+        }
+
+        .overflow-demo .item img {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .overflow-demo .item .content {
+            min-width: 130px;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 95%;
+        }
+
+        .overflow-demo h4 {
+            font-size: 1.4em;
+            margin: 5px;
+            padding: 0;
+            color: #666;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #f8f8f8;
+            margin-bottom: 15px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar input[type=text] {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
+        a {
+            color: #669;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font: bold 36px/100% Arial, Helvetica, sans-serif;
+        }
+
+        #content {
+            background: #f8f8f8;
+            padding: 0.5em 1em;
+            width: 65%;
+            float: left;
+        }
+
+        #sidebar,
+        #sidebar2 {
+            background: #f0efef;
+            padding-left: 1em;
+        }
+
+        #header,
+        #content,
+        #sidebar {
+            margin-bottom: 5px;
+        }
+
+        #header {
+            height: 180px;
+        }
+
+        #sidebar {
+            width: 27%;
+            float: right;
+        }
+
+        #sidebar2 {
+            width: 27%;
+            clear: right;
+            display: block;
+            margin-top: 1em;
+            float: right;
+            padding-bottom: 1em;
+        }
+
+        img {
+            float: left;
+            padding: 1.2%;
+        }
+
+        @media screen and (max-width: 980px) {
+            #pagewrap {
+                width: 100%;
+            }
+
+            #content {
+                width: 60%;
+            }
+
+            iframe {
+                width: 95%;
+                height: 90%;
+            }
+
+            .icon {
+                width: 30%;
+            }
+
+            #sidebar {
+                width: 30%;
+                float: right;
+            }
+
+            #sidebar2 {
+                width: 30%;
+                clear: right;
+                display: block;
+                margin-top: 1em;
+                float: right;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            #content {
+                width: auto;
+                float: none;
+                padding-top: 1px;
+                padding-bottom: 1px;
+            }
+
+            img {
+                width: 96%;
+            }
+
+            #sidebar {
+                margin-top: 1em;
+                width: auto;
+                float: none;
+                padding-top: 1px;
+                padding-bottom: 1px;
+            }
+
+            .icon {
+                width: auto;
+            }
+
+            #sidebar2 {
+                padding-top: 1px;
+                width: auto;
+                float: none;
+                padding-bottom: 17em;
+                height: auto;
+            }
+
+            iframe {
+                width: 95%;
+                height: 90%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            #header {
+                height: auto;
+            }
+
+            iframe {
+                width: 95%;
+                height: 90%;
+            }
+
+            #sidebar {
+                width: auto;
+                float: none;
+            }
+
+            #sidebar2 {
+                width: auto;
+                float: none;
+            }
+
+            .navbar input[type=text] {
+                display: none;
+            }
+        }
+    </style>
+
+<body>
+    <h1>Demo</h1>
+    <h3 id="tugas">Tugas Responsive Website</h3>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <input type="text" placeholder="Search..">
+    </div>
+    <div id="pagewrap">
+        <div id="content">
+            <h2>Content</h2>
+            <p>March 7, 2023</p>
+            <img src="kira.jpg" width="96%">
+            <p>My name is Yoshikage Kira. I'm 33 years old. My house is in the northeast section of Morioh, where all the villas are, and I am not married. 
+                I work as an employee for the Kame Yu department stores, and I get home every day by 8 PM at the latest. 
+                I don't smoke, but I occasionally drink. I'm in bed by 11 PM, and make sure I get eight hours of sleep, no matter what. 
+                After having a glass of warm milk and doing about twenty minutes of stretches before going to bed, 
+                I usually have no problems sleeping until morning. Just like a baby, I wake up without any fatigue or stress in the morning. 
+                I was told there were no issues at my last check-up. I'm trying to explain that I'm a person who wishes to live a very quiet life. 
+                I take care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night. 
+                That is how I deal with society, and I know that is what brings me happiness. Although, if I were to fight I wouldn't lose to anyone.
+            </p>
+            <h2>Theme Song</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=9yGGNohmAT0" frameborder="0"></iframe>
+        </div>
+        <div id="sidebar">
+            <h3>Sidebar</h3>
+            <ul>
+                <li>Placeholder</li>
+                <li>Placeholder</li>
+                <li>Placeholder</li>
+            </ul>
+        </div>
+        <div id="sidebar2">
+            <h3>Flickr</h4>
+                <div>
+                    <img  class="icon" src="1.jpg">
+                </div>
+                <div>
+                    <img  class="icon" src="1.jpg">
+                </div>
+                <div>
+                    <img  class="icon" src="1.jpg">
+                </div>
+                <div>
+                    <img  class="icon"src="1.jpg">
+                </div>
+                <div>
+                    <img  class="icon" src="1.jpg">
+                </div>
+                <div>
+                    <img  class="icon" src="1.jpg">
+                </div>
+        </div>
+    </div>
+</body>
+
+</html>
