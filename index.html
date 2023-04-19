@@ -1,293 +1,214 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Website</title>
-    <style>
-        body {
-            margin: 1% 2%;
-            background-image: url('1.jpg');
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tugas Layout Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <style>
+    .navbar {
+      height: 90px;
+    }
 
-        h1, #tugas {
-            color: #f8f8f8;
-        }
+    .nav-link {
+      margin-left: 5px;
+    }
 
-        .relative-padding {
-            background: #eee;
-            border: solid 1px #ddd;
-            padding: 3% 5%;
-        }
+    .card .btn {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+    }
 
-        .overflow-demo {
-            overflow: hidden;
-        }
+    .custom-bg-gray {
+      background-color: aqua;
+    }
 
-        .overflow-demo .item {
-            width: 45%;
-            margin-right: 5%;
-            float: left;
-        }
-
-        .overflow-demo .item img {
-            float: left;
-            margin-right: 20px;
-            margin-bottom: 20px;
-        }
-
-        .overflow-demo .item .content {
-            min-width: 130px;
-            overflow: hidden;
-        }
-
-        iframe {
-            width: 95%;
-        }
-
-        .overflow-demo h4 {
-            font-size: 1.4em;
-            margin: 5px;
-            padding: 0;
-            color: #666;
-        }
-
-        .navbar {
-            overflow: hidden;
-            background-color: #f8f8f8;
-            margin-bottom: 15px;
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: black;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .navbar input[type=text] {
-            float: right;
-            padding: 6px;
-            border: none;
-            margin-top: 8px;
-            margin-right: 16px;
-            font-size: 17px;
-        }
-
-        a {
-            color: #669;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        h1 {
-            font: bold 36px/100% Arial, Helvetica, sans-serif;
-        }
-
-        #content {
-            background: #f8f8f8;
-            padding: 0.5em 1em;
-            width: 65%;
-            float: left;
-            padding-bottom: 2em;
-        }
-
-        #sidebar,
-        #sidebar2 {
-            background: #f0efef;
-            padding-left: 1em;
-        }
-
-        #header,
-        #content,
-        #sidebar {
-            margin-bottom: 5px;
-        }
-
-        #header {
-            height: 180px;
-        }
-
-        #sidebar {
-            width: 27%;
-            float: right;
-        }
-
-        #sidebar2 {
-            width: 27%;
-            clear: right;
-            display: block;
-            margin-top: 1em;
-            float: right;
-            padding-bottom: 1em;
-        }
-
-        img {
-            float: left;
-            padding: 1.2%;
-        }
-
-        @media screen and (max-width: 980px) {
-            #pagewrap {
-                width: 100%;
-            }
-
-            #content {
-                width: 60%;
-            }
-
-            iframe {
-                width: 95%;
-                height: 90%;
-            }
-
-            .icon {
-                width: 30%;
-            }
-
-            #sidebar {
-                width: 30%;
-                float: right;
-            }
-
-            #sidebar2 {
-                width: 30%;
-                clear: right;
-                display: block;
-                margin-top: 1em;
-                float: right;
-            }
-        }
-
-        @media screen and (max-width: 700px) {
-            #content {
-                width: auto;
-                float: none;
-                padding-top: 1px;
-                padding-bottom: 1px;
-            }
-
-            img {
-                width: 96%;
-            }
-
-            #sidebar {
-                margin-top: 1em;
-                width: auto;
-                float: none;
-                padding-top: 1px;
-                padding-bottom: 1px;
-            }
-
-            .icon {
-                width: auto;
-            }
-
-            #sidebar2 {
-                padding-top: 1px;
-                width: auto;
-                float: none;
-                padding-bottom: 17em;
-                height: auto;
-            }
-
-            iframe {
-                width: 95%;
-                height: 90%;
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            #header {
-                height: auto;
-            }
-
-            iframe {
-                width: 95%;
-                height: 90%;
-            }
-
-            #sidebar {
-                width: auto;
-                float: none;
-            }
-
-            #sidebar2 {
-                width: auto;
-                float: none;
-            }
-
-            .navbar input[type=text] {
-                display: none;
-            }
-        }
-    </style>
+    .fa-phone {
+      color: aliceblue;
+    }
+    
+    
+  </style>
+</head>
 
 <body>
-    <h1>Demo</h1>
-    <h3 id="tugas">Tugas Responsive Website</h3>
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <input type="text" placeholder="Search..">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="md.png" alt="Logo" width="30" height="26"> YOUR LOGO
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07"
+        aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" style="margin-left: 10px;" id="navbarsExample07">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="navbar-nav sm-icons">
+        <li><a class="nav-link" href="#"><i class="bi bi-facebook"></i></a></li>
+        <li><a class="nav-link" href="#"><i class="bi bi-instagram"></i></a></li>
+        <li><a class="nav-link" href="#"><i class="bi bi-twitter"></i></a></li>
+      </ul>
     </div>
-    <div id="pagewrap">
-        <div id="content">
-            <h2>Content</h2>
-            <p>March 7, 2023</p>
-            <img src="kira.jpg" width="96%">
-            <p>My name is Yoshikage Kira. I'm 33 years old. My house is in the northeast section of Morioh, where all the villas are, and I am not married. 
-                I work as an employee for the Kame Yu department stores, and I get home every day by 8 PM at the latest. 
-                I don't smoke, but I occasionally drink. I'm in bed by 11 PM, and make sure I get eight hours of sleep, no matter what. 
-                After having a glass of warm milk and doing about twenty minutes of stretches before going to bed, 
-                I usually have no problems sleeping until morning. Just like a baby, I wake up without any fatigue or stress in the morning. 
-                I was told there were no issues at my last check-up. I'm trying to explain that I'm a person who wishes to live a very quiet life. 
-                I take care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night. 
-                That is how I deal with society, and I know that is what brings me happiness. Although, if I were to fight I wouldn't lose to anyone.
-            </p>
-            <h2>Theme Song</h2>
-            <iframe src="https://www.youtube.com/embed/9yGGNohmAT0" title="Killer (Yoshikage Kira&#39;s Theme) - 
-            Jojo&#39;s Bizarre Adventure Part 4: Diamond Is Unbreakable" frameborder="0" allow="accelerometer; autoplay; 
-             clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </nav>
+  <br>
+  <div class="container text-center">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="31.jpg" class="d-block w-100" alt="...">
         </div>
-        <div id="sidebar">
-            <h3>Sidebar</h3>
-            <ul>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
-                <li>Placeholder</li>
-            </ul>
+        <div class="carousel-item">
+          <img src="1593399002465.jpg" class="d-block w-100" alt="...">
         </div>
-        <div id="sidebar2">
-            <h3>Flickr</h4>
-                <div>
-                    <img  class="icon" src="1.jpg">
-                </div>
-                <div>
-                    <img  class="icon" src="1.jpg">
-                </div>
-                <div>
-                    <img  class="icon" src="1.jpg">
-                </div>
-                <div>
-                    <img  class="icon"src="1.jpg">
-                </div>
-                <div>
-                    <img  class="icon" src="1.jpg">
-                </div>
-                <div>
-                    <img  class="icon" src="1.jpg">
-                </div>
+        <div class="carousel-item">
+          <img src="31.jpg" class="d-block w-100" alt="...">
         </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-3 mb-3 mb-sm-0">
+        <div class="card">
+          <img src="md.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card 1</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card ">
+          <img src="md.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card 2</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="md.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card 3</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card">
+          <img src="md.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card 4</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:200px;">
+    <div class="container">
+      <ul class="navbar-nav sm-icons">
+        <li><a class="nav-link" href="#"><i class="bi bi-facebook"></i></a></li>
+        <li><a class="nav-link" href="#"><i class="bi bi-instagram"></i></a></li>
+        <li><a class="nav-link" href="#"><i class="bi bi-twitter"></i></a></li>
+      </ul>
+      <div class="collapse navbar-collapse justify-content-center" style="margin-left: 10px;" id="navbarsExample07">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">123-456-7890</a>
+          <a class="nav-link" href="#">098-765-4321</a>
+          <a class="nav-link" href="#">contohemail@contoh.com</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height:50px;">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarsExample07">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link">Tugas Layout Bootstrap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">5321600002 Ray Yusra Wijaya</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+
+  
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+    integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
