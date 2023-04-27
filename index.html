@@ -64,21 +64,21 @@
 				return false;
 			}
 
-			// memvalidasi nama
+			//validasi nama
 			var regexNama = /^[a-zA-Z ]*$/;
 			if (!regexNama.test(nama)) {
 				alert("Nama hanya diisi dengan huruf");
 				return false;
 			}
 
-			// memvalidasi username
+			//validasi username
 			var regexUsername = /^[a-zA-Z0-9]*$/;
 			if (!regexUsername.test(username)) {
 				alert("Username hanya diisi dengan huruf dan angka");
 				return false;
 			}
 
-			// memvalidasi email
+			//validasi email
 			var regexEmail = /^\S+@\S+\.\S+$/;
 			if (!regexEmail.test(email)) {
 				alert("Email tidak valid");
